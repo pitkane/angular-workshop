@@ -1,3 +1,17 @@
 <h1>
   {{title}}
 </h1>
+
+<div>{{itemAdded}}</div>
+
+<div>Items left todo: {{ todos.length }}</div>
+
+<app-todo-item *ngFor="let todo of todos" (click)="todo.done = !todo.done" [class.done]="todo.done" [todo]="todo">
+</app-todo-item>
+
+<br><br>
+
+<app-new-item [todos]="todos" (onNewItem)="onAddNewItem($event)">
+</app-new-item>
+
+<br><br>

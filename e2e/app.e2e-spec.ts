@@ -1,5 +1,7 @@
 import { AngularWorkshopPage } from './app.po';
 
+import {} from 'jasmine';
+
 describe('angular-workshop App', function() {
   let page: AngularWorkshopPage;
 
